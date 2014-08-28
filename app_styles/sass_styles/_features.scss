@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+features {
+  width: 100%;
+  height: auto;
+}
+
+.description {
+
+  margin-top: 20px;
+  width: 50%;
+  float: left;
+
+  h2 {
+    padding-left: 10px;
+    font-size: 2.5em;
+  }
+
+  ul {
+    list-style: none;
+    padding:0;
+    margin:0;
+  }
+
+  li {
+    margin-top: 10px;
+    margin-left: 30px; 
+    padding-left: 1em; 
+    text-indent: -1.1em;
+    font-size: 1.1em;
+
+    &:before {
+      content: "✔ ";
+      color: $base-blue;
+    }
+  }
+  
+}
+
+/*Carousel styles*/
+
+.features figure {
+  position: relative;
+
+  float: right;
+  width: 50%;
+
+  margin: 0;
+  padding: 0;
+
+  img {
+    width: 65%;
+    height: auto;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+  }
+
+  .carousel {
+    position: absolute;
+
+    top: 20.5%;
+    left: 28%;
+
+    width: 44.5%;
+    height: auto;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+
+%arrow
+{
+  width: 50px;
+  height: 50px;
+
+  position: absolute;
+
+  border: none;
+
+  cursor: pointer;
+  display: block;
+  background: url(../app_pictures/arrow_icons.png) no-repeat;
+  overflow:hidden;
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
+
+.arrow-left {
+  @extend %arrow;
+  top: 45%;
+  left: -39%;
+  background-position: -3px -33px;
+  &:hover {
+    background-position: -243px -33px;
+  }
+  &:active {
+    background-position: -123px -33px;
+    }
+}
+
+.arrow-right {
+  @extend %arrow;
+  top: 45%;
+  left: 112%;
+  background-position: -63px -33px;
+  &:hover {
+    background-position: -303px -33px;
+  } 
+  &:active {
+    background-position: -183px -33px;
+  }     
+}
+
+
+.appStoreLabel {
+  width: 33.33%;
+
+  clear: both;
+
+  margin-left: 10px;
+  margin-bottom: 30px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+/* Media queries */
+
+@media screen and (max-width: 720px) {
+  .description, .features figure {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .description li {
+    margin-left: 0;
+  }
+
+  .arrow-left, .arrow-right {
+    display: none !important;
+  }
+
+  .appStoreLabel {
+    width: 75%;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+

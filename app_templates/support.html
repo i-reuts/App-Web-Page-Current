@@ -1,0 +1,23 @@
+<form name="reviewForm" class='reviewForm' ng-controller='formController as formCtrl' ng-submit="formCtrl.submitForm(reviewForm.$valid)" novalidate>
+
+  <fieldset> 
+
+  <h3 ng-show="formCtrl.displayConfirmation" class="help-block">Your message was succesfully submitted</h3>
+
+  <h2>Contact us:</h2>
+<div class="form-group">
+                  
+  <input ng-model='formCtrl.formData.name' class="form-control" type="text" placeholder="Your Name"  name='name' required/>
+  <p ng-show="reviewForm.name.$invalid && formCtrl.invalidSubmit" class="help-block">Your name is required.</p>
+
+  <input ng-model='formCtrl.formData.email' type="email" placeholder="janeDoe@example.org" name='email' required/>
+  <p ng-show="reviewForm.email.$invalid && formCtrl.invalidSubmit" class="help-block">Enter a valid email.</p>
+
+  <textarea ng-model='formCtrl.formData.text' placeholder="Enter your message here..."  name='text' required></textarea>
+  <p ng-show="reviewForm.text.$invalid && formCtrl.invalidSubmit" class="help-block">This field is required.</p>
+
+  <button class="btn btn-primary center"  value="Submit">Submit</button>
+	</div>
+  </fieldset>
+
+</form>

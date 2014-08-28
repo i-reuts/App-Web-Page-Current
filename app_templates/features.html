@@ -1,0 +1,33 @@
+<div class="features">
+	<section class="description">
+		<h2>Notable features:</h2>
+		<ul>
+			<li>Large database of items</li>
+			<li>Product details</li>
+			<li>Up to date discount information</li>
+			<li>Barcode scanning</li>
+			<li>Automatic location finder</li>
+			<li>List of stores within specified distance from selected location</li>
+			<li>Store locations on the integrated map</li>
+			<li>Favorites and history list</li>
+			<li>Similar product finder</li>
+		</ul>
+	</section>
+
+	<figure ng-controller='carouselController as carouselCtrl'>
+		<img src="app_pictures/iphone_5c_template.png"/>
+		
+		<div class="carousel">
+  			<div><img src="app_pictures/search.png"/></div>
+  			<div><img src="app_pictures/map.png"/></div>
+  			<div><img src="app_pictures/favourites.png"/></div>
+  		</div>
+
+  		{{carouselCtrl.initializeCarousel()}}
+
+	</figure>
+			
+	<div class="appStoreLabel">
+		<a href='https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=909405703&mt=8' target="_blank"><img src="app_pictures/itunes-app-store-logo1.png"/></a>
+	</div>
+</div>

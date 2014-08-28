@@ -1,0 +1,97 @@
+/* SUPPORT FORM STYLES */
+.reviewForm {
+  fieldset {
+    border: none;
+
+    width: 66.67%;
+
+    margin-left: auto;
+    margin-right: auto
+  }
+
+  h2, h3 {
+    text-align: center;
+  }
+
+  h3 {
+    color: green;
+  }
+
+  p {
+    color: red;
+  }
+
+  %inputfield {
+    display: block;
+
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    border-radius: 5px;
+
+    padding: 5px;
+
+    box-shadow: 0px 0px 10px $base-blue;
+
+    &:focus {
+      outline: 0;
+
+      border-width: 2px;
+      border-color: $light-blue;
+    }
+
+  }
+
+  textarea { 
+    @extend %inputfield;
+
+    resize:none;
+    
+    height: 15em;
+  }
+
+  input {
+    @extend %inputfield;
+
+    border-width: 1px;
+  }
+
+  input[type="submit"] {
+    @extend %button;
+
+    width: 50%;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    font-weight: bold;
+    font-size: 1.1em;
+
+    &:hover {
+      outline: 0;
+
+      cursor: pointer;
+    }
+
+    &:focus {
+      border-width: 1px;
+      border-color: $dark-grey;
+    }
+  }
+
+}
+
+.ng-invalid.ng-dirty, .ng-invalid.ng-dirty:focus {
+  border-width: 2px;
+  border-color: red;
+}
+
+.ng-valid.ng-dirty, .ng-valid.ng-dirty:focus {
+  border-width: 2px;
+  border-color: green;
+}

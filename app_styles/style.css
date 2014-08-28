@@ -1,0 +1,293 @@
+@charset "UTF-8";
+/* General body styles */
+body {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
+  padding: 5px; }
+
+header nav .button, .reviewForm input[type="submit"] {
+  color: #428bca;
+  background-color: #f5f5f5;
+  border: 1px solid #757575;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #363636;
+  padding: 3px; }
+  header nav .button:hover, .reviewForm input[type="submit"]:hover {
+    background-color: #dbdbdb; }
+
+header .pageHeader, .appScreen {
+  zoom: 1; }
+  header .pageHeader:before, .appScreen:before, header .pageHeader:after, .appScreen:after {
+    content: "";
+    display: table; }
+  header .pageHeader:after, .appScreen:after {
+    clear: both; }
+
+/*Needed to prevent Carousel bug*/
+.ng-hide {
+  display: block !important;
+  position: absolute;
+  top: -9999px;
+  left: -9999px; }
+
+/* Header styles */
+header h1 {
+  float: left; }
+header h3 {
+  font-size: 1.5em;
+  font-style: italic;
+  color: #428bca; }
+header .pageHeader {
+  font-family: 'Arvo', serif;
+  border-bottom: 2px solid #757575; }
+header nav {
+  float: right;
+  margin-top: 45px; }
+  header nav ul {
+    margin: 0;
+    padding: 0; }
+  header nav li {
+    display: inline;
+    margin-left: 3px; }
+  header nav .button {
+    text-decoration: none; }
+
+/* Main styles */
+main {
+  font-family: 'PT Sans', sans-serif;
+  position: relative; }
+
+/* Media queries */
+@media screen and (min-width: 960px) {
+  body {
+    width: 848px; } }
+@media screen and (max-width: 865px) {
+  header nav {
+    display: inline-block;
+    float: none;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px; } }
+@media screen and (max-width: 720px) {
+  header h1, header h3 {
+    float: none;
+    text-align: center; }
+  header nav {
+    text-align: center; } }
+features {
+  width: 100%;
+  height: auto; }
+
+.description {
+  margin-top: 20px;
+  width: 50%;
+  float: left; }
+  .description h2 {
+    padding-left: 10px;
+    font-size: 2.5em; }
+  .description ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .description li {
+    margin-top: 10px;
+    margin-left: 30px;
+    padding-left: 1em;
+    text-indent: -1.1em;
+    font-size: 1.1em; }
+    .description li:before {
+      content: "✔ ";
+      color: #428bca; }
+
+/*Carousel styles*/
+.features figure {
+  position: relative;
+  float: right;
+  width: 50%;
+  margin: 0;
+  padding: 0; }
+  .features figure img {
+    width: 65%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+  .features figure .carousel {
+    position: absolute;
+    top: 20.5%;
+    left: 28%;
+    width: 44.5%;
+    height: auto; }
+    .features figure .carousel img {
+      width: 100%;
+      height: auto; }
+
+.arrow-left, .arrow-right {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  display: block;
+  background: url(../app_pictures/arrow_icons.png) no-repeat;
+  overflow: hidden; }
+  .arrow-left:focus, .arrow-right:focus {
+    border: none;
+    outline: none; }
+
+.arrow-left {
+  top: 45%;
+  left: -39%;
+  background-position: -3px -33px; }
+  .arrow-left:hover {
+    background-position: -243px -33px; }
+  .arrow-left:active {
+    background-position: -123px -33px; }
+
+.arrow-right {
+  top: 45%;
+  left: 112%;
+  background-position: -63px -33px; }
+  .arrow-right:hover {
+    background-position: -303px -33px; }
+  .arrow-right:active {
+    background-position: -183px -33px; }
+
+.appStoreLabel {
+  width: 33.33%;
+  clear: both;
+  margin-left: 10px;
+  margin-bottom: 30px; }
+  .appStoreLabel img {
+    width: 100%;
+    height: auto; }
+
+/* Media queries */
+@media screen and (max-width: 720px) {
+  .description, .features figure {
+    float: none;
+    width: 100%;
+    text-align: center; }
+
+  .description li {
+    margin-left: 0; }
+
+  .arrow-left, .arrow-right {
+    display: none !important; }
+
+  .appStoreLabel {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto; } }
+/*DESCRIPTION FORM STYLES */
+description h1 {
+  margin-top: 40px;
+  text-align: center; }
+
+.appScreen {
+  margin-top: 50px; }
+  .appScreen:nth-child(odd) .screenDescription {
+    float: right; }
+  .appScreen:nth-child(odd) .screenSnapshot {
+    float: left; }
+  .appScreen:nth-child(even) .screenDescription {
+    float: left; }
+  .appScreen:nth-child(even) .screenSnapshot {
+    float: right; }
+  .appScreen:last-child {
+    margin-bottom: 30px; }
+
+.screenDescription, .screenSnapshot {
+  width: 50%; }
+
+.screenDescription h2 {
+  padding-top: 80px;
+  font-family: 'Arvo', serif;
+  font-style: italic;
+  font-size: 1.5em;
+  text-align: center;
+  text-decoration: underline;
+  color: #346fa1; }
+.screenDescription p {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  font-size: 1.1em;
+  line-height: 1.4em; }
+
+.screenSnapshot img {
+  display: block;
+  width: 60%;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid #e3e3e3;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px #363636; }
+
+@media screen and (max-width: 720px) {
+  .appScreen h2 {
+    padding-top: 0; }
+
+  .screenDescription, .screenSnapshot {
+    float: none;
+    width: 100%;
+    text-align: center; } }
+/* SUPPORT FORM STYLES */
+.reviewForm fieldset {
+  border: none;
+  width: 66.67%;
+  margin-left: auto;
+  margin-right: auto; }
+.reviewForm h2, .reviewForm h3 {
+  text-align: center; }
+.reviewForm h3 {
+  color: green; }
+.reviewForm p {
+  color: red; }
+.reviewForm textarea, .reviewForm input {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0px 0px 10px #428bca; }
+  .reviewForm textarea:focus, .reviewForm input:focus {
+    outline: 0;
+    border-width: 2px;
+    border-color: #6dbbff; }
+.reviewForm textarea {
+  resize: none;
+  height: 15em; }
+.reviewForm input {
+  border-width: 1px; }
+.reviewForm input[type="submit"] {
+  width: 50%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 1.1em; }
+  .reviewForm input[type="submit"]:hover {
+    outline: 0;
+    cursor: pointer; }
+  .reviewForm input[type="submit"]:focus {
+    border-width: 1px;
+    border-color: #757575; }
+
+.ng-invalid.ng-dirty, .ng-invalid.ng-dirty:focus {
+  border-width: 2px;
+  border-color: red; }
+
+.ng-valid.ng-dirty, .ng-valid.ng-dirty:focus {
+  border-width: 2px;
+  border-color: green; }
+
+/*# sourceMappingURL=style.css.map */
