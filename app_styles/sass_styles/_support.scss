@@ -9,8 +9,13 @@
     margin-right: auto
   }
 
-  h2, h3 {
+  h1 {
     text-align: center;
+<<<<<<< HEAD
+    margin-bottom: 0.83em;
+  }
+  
+=======
     font-weight: bold;
     margin-bottom: 0.83em;
   }
@@ -20,8 +25,17 @@
     color: green;
   }
 
+>>>>>>> origin/gh-pages
   p {
-    color: red;
+    &.confirmation {
+      text-align: center;
+      font-size: 1.3em;
+      color: green;
+    }
+    &.invalid {
+      color: red;
+      font-size: 1em;
+    }
   }
 
   %inputfield {
@@ -36,7 +50,10 @@
     margin-top: 10px;
     margin-bottom: 10px;
 
+    border-style: inset;
     border-radius: 5px;
+    border-width: 1px;
+    border-color: $background-grey;
 
     padding: 5px;
 
@@ -55,12 +72,14 @@
     @extend %inputfield;
 
     resize:none;
-    
+  
     height: 15em;
   }
 
   input {
     @extend %inputfield;
+<<<<<<< HEAD
+=======
 
     border-width: 1px;
   }
@@ -85,6 +104,7 @@
       border-width: 1px;
       border-color: $dark-grey;
     }
+>>>>>>> origin/gh-pages
   }
 
 }

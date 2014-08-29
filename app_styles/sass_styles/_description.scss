@@ -46,9 +46,12 @@ description h1 {
     padding-top: 80px;
 
     font-family: 'Arvo', serif;
+<<<<<<< HEAD
+=======
     font-style: italic;
     font-size: 1.5em;
     font-weight: bold;
+>>>>>>> origin/gh-pages
     text-align: center;
     text-decoration: underline;
     color: $dark-blue;
@@ -95,6 +98,10 @@ description h1 {
     width: 100%;
 
     text-align: center;
+  }
+
+  .screenSnapshot {
+    padding-top: 20px;
   }
   
 }
