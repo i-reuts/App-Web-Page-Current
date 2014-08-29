@@ -2,22 +2,22 @@
 
   <fieldset> 
 
-  <p ng-show="formCtrl.displayConfirmation" class="help-block confirmation">Votre message a bien été envoyé</p>
+  <h3 ng-show="formCtrl.displayConfirmation" class="help-block">Your message was succesfully submitted</h3>
 
-  <h1>Contactez-nous:</h1>
-  <div class="form-group">
+  <h2>Contact us: (french)</h2>
+<div class="form-group">
                   
-  <input ng-model='formCtrl.formData.name' type="text" placeholder="Votre nom"  name='name' required/>
-  <p ng-show="reviewForm.name.$invalid && formCtrl.invalidSubmit" class="help-block invalid">Votre nom est requis.</p>
+  <input ng-model='formCtrl.formData.name' class="form-control" type="text" placeholder="Your Name"  name='name' required/>
+  <p ng-show="reviewForm.name.$invalid && formCtrl.invalidSubmit" class="help-block">Your name is required.</p>
 
   <input ng-model='formCtrl.formData.email' type="email" placeholder="janeDoe@example.org" name='email' required/>
-  <p ng-show="reviewForm.email.$invalid && formCtrl.invalidSubmit" class="help-block invalid">Saisissez une adresse de courriel valide.</p>
+  <p ng-show="reviewForm.email.$invalid && formCtrl.invalidSubmit" class="help-block">Enter a valid email.</p>
 
-  <textarea ng-model='formCtrl.formData.text' placeholder="Saisissez votre message ici..."  name='text' required></textarea>
-  <p ng-show="reviewForm.text.$invalid && formCtrl.invalidSubmit" class="help-block invalid">Ce champ est obligatoire.</p>
+  <textarea ng-model='formCtrl.formData.text' placeholder="Enter your message here..."  name='text' required></textarea>
+  <p ng-show="reviewForm.text.$invalid && formCtrl.invalidSubmit" class="help-block">This field is required.</p>
 
-  <button class="btn btn-primary center"  value="Submit">Soumettre</button>
-  </div>
+  <button class="btn btn-primary center"  value="Submit">Submit</button>
+	</div>
   </fieldset>
 
 </form>
