@@ -7,6 +7,15 @@ features {
   p {
     padding-left: 10px;
     padding-right: 10px;
+
+    margin-top: 50px;
+
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+  }
+
+  div {
+    @extend %clearfix;
   }
 }
 
@@ -52,7 +61,7 @@ features {
   float: right;
   width: 50%;
 
-  margin: 0;
+  margin: 40px 0 0 0;
   padding: 0;
 
   img {
@@ -129,10 +138,12 @@ features {
 
 
 .appStoreLabel {
+
   width: 33.33%;
 
   clear: both;
 
+  margin-top: 30px;
   margin-left: 10px;
   margin-bottom: 30px;
 

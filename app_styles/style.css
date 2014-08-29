@@ -9,12 +9,12 @@ body {
   border-radius: 5px;
   padding: 5px; }
 
-header .pageHeader, .appScreen {
+header .pageHeader, features div, .appScreen {
   zoom: 1; }
-  header .pageHeader:before, .appScreen:before, header .pageHeader:after, .appScreen:after {
+  header .pageHeader:before, features div:before, .appScreen:before, header .pageHeader:after, features div:after, .appScreen:after {
     content: "";
     display: table; }
-  header .pageHeader:after, .appScreen:after {
+  header .pageHeader:after, features div:after, .appScreen:after {
     clear: both; }
 
 /*Needed to prevent Carousel bug*/
@@ -55,7 +55,10 @@ features {
   height: auto; }
   features p {
     padding-left: 10px;
-    padding-right: 10px; }
+    padding-right: 10px;
+    margin-top: 50px;
+    font-family: 'Times New Roman', serif;
+    font-style: italic; }
 
 .description {
   margin-top: 20px;
@@ -85,7 +88,7 @@ features {
   position: relative;
   float: right;
   width: 50%;
-  margin: 0;
+  margin: 40px 0 0 0;
   padding: 0; }
   .features figure img {
     width: 65%;
@@ -137,6 +140,7 @@ features {
 .appStoreLabel {
   width: 33.33%;
   clear: both;
+  margin-top: 30px;
   margin-left: 10px;
   margin-bottom: 30px; }
   .appStoreLabel img {
@@ -272,5 +276,28 @@ description h1 {
 .ng-valid.ng-dirty, .ng-valid.ng-dirty:focus {
   border-width: 2px;
   border-color: green; }
+
+about h2 {
+  margin: 40px 0px 30px 10px;
+  font-weight: bold; }
+about h3 {
+  font-weight: bold;
+  margin-left: 10px;
+  font-size: 1em; }
+about p {
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 1em; }
+about ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+about li {
+  padding-left: 1em;
+  text-indent: 1em; }
+about li:before {
+  content: "● ";
+  color: #428bca;
+  /* or whatever color you prefer */ }
 
 /*# sourceMappingURL=style.css.map */
