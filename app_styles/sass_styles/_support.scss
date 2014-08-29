@@ -9,19 +9,21 @@
     margin-right: auto
   }
 
-  h2, h3 {
+  h1 {
     text-align: center;
-    font-weight: bold;
     margin-bottom: 0.83em;
   }
   
-
-  h3 {
-    color: green;
-  }
-
   p {
-    color: red;
+    &.confirmation {
+      text-align: center;
+      font-size: 1.3em;
+      color: green;
+    }
+    &.invalid {
+      color: red;
+      font-size: 1em;
+    }
   }
 
   %inputfield {
@@ -36,7 +38,10 @@
     margin-top: 10px;
     margin-bottom: 10px;
 
+    border-style: inset;
     border-radius: 5px;
+    border-width: 1px;
+    border-color: $background-grey;
 
     padding: 5px;
 
@@ -55,36 +60,12 @@
     @extend %inputfield;
 
     resize:none;
-    
+  
     height: 15em;
   }
 
   input {
     @extend %inputfield;
-
-    border-width: 1px;
-  }
-
-  input[type="submit"] {
-
-    width: 50%;
-
-    margin-top: 30px;
-    margin-bottom: 30px;
-
-    font-weight: bold;
-    font-size: 1.1em;
-
-    &:hover {
-      outline: 0;
-
-      cursor: pointer;
-    }
-
-    &:focus {
-      border-width: 1px;
-      border-color: $dark-grey;
-    }
   }
 
 }
