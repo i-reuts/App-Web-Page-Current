@@ -14,20 +14,6 @@ body {
   padding: 5px;
 }
 
-%button {
-	color: $base-blue;
-	background-color: $background-grey;
-	border: 1px solid $dark-grey;
-	border-radius: 5px;
-	box-shadow: 2px 2px 2px $shadow-color;
-	padding: 3px;
-
-	&:hover {
-		background-color: $button-hover-color;
-	}
-}
-
-
 %clearfix {
 	&:before, &:after {
   	content: "";
@@ -60,7 +46,9 @@ header {
 	}
 
 	h3 {
+    font-family: 'Times New Roman', serif;
 		font-size: 1.5em;
+    font-weight: bold;
 		font-style: italic;
 		color: $base-blue;
 	}
@@ -71,33 +59,14 @@ header {
 		border-bottom: 2px solid $dark-grey;
 	}
 
-	nav {
-		float: right;
-		margin-top: 45px;
-
-		ul {
-			margin: 0;
-			padding: 0;
-		}
-
-		li {
-			display: inline;
-			margin-left: 3px;
-		}
-
-		.button {
-			@extend %button;
-			text-decoration: none;
-		}
-	}
 }
 
 
 /* Main styles */
 
-main {
-	font-family: 'PT Sans', sans-serif;
-	position: relative;
+main, main h1, main h2, main h3 {
+	 font-family: 'PT Sans', sans-serif;
+	 position: relative;
 }
 
 
@@ -109,27 +78,10 @@ main {
 	}
 }
 
-@media screen and (max-width: 865px) {
-	header nav {
-		display: inline-block;
-		float: none;
-
-		width: 100%;
-
-		margin-top: 0;
-		margin-bottom: 20px;
-	}
-}
 
 @media screen and (max-width: 720px) {
-  header {
-	h1, h3 {
+  header h3 {
 	  float: none;
 	  text-align: center;
-	}
-
-	nav {
-	  text-align: center;
-	}
   }
 }

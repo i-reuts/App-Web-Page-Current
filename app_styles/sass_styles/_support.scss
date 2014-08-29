@@ -11,7 +11,10 @@
 
   h2, h3 {
     text-align: center;
+    font-weight: bold;
+    margin-bottom: 0.83em;
   }
+  
 
   h3 {
     color: green;
@@ -25,6 +28,7 @@
     display: block;
 
     width: 100%;
+    height: 2em;
 
     margin-left: auto;
     margin-right: auto;
@@ -62,7 +66,6 @@
   }
 
   input[type="submit"] {
-    @extend %button;
 
     width: 50%;
 

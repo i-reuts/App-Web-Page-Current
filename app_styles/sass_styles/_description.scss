@@ -3,6 +3,8 @@
 description h1 {
   margin-top: 40px;
   text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
 }
 
 .appScreen {
@@ -46,6 +48,7 @@ description h1 {
     font-family: 'Arvo', serif;
     font-style: italic;
     font-size: 1.5em;
+    font-weight: bold;
     text-align: center;
     text-decoration: underline;
     color: $dark-blue;

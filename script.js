@@ -116,5 +116,18 @@
 			templateUrl: 'app_templates/support_fr.html'
 			};
 	});
+
+	app.directive('about', function(){
+		if(app.lang === 'EN') {
+			return {
+				restrict: 'E',
+				templateUrl: 'app_templates/about.html'
+			};
+		}
+		else return {
+			restrict: 'E',
+			templateUrl: 'app_templates/about_fr.html'
+			};
+	});
 	
 }) ();
